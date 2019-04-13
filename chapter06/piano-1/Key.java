@@ -17,12 +17,25 @@ public class Key extends Actor
         //Animate the piano key being pressed
         if (Greenfoot.isKeyDown("g"))
         {
+            //Key is down
             setImage("white-key-down.png");
+            play();
         }
         else
         {
+            //Key is up
             setImage("white-key.png"); 
         }
+
     }
+
+    /**
+     * Play the note of this key
+     */
+    public void play()
+    {
+        Greenfoot.playSound("3a.wav");
+    }
+
 }
 
